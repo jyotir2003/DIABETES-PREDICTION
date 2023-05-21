@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <style>
+    body {
+      background-color: grey;
+      font-family: Arial, sans-serif;
+      
+
+        
+    }
+    
+    .login {
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      margin: 0 auto;
+      max-width: 400px;
+      padding: 20px;
+      text-align: center;
+      margin-top: 100px;
+    }
+    
+    h1 {
+      color: #ff8c00;
+      font-size: 24px;
+      margin-bottom: 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    }
+    
+    input[type="text"] {
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 16px;
+      padding: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    
+    .btn {
+      background-color: #336699;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 10px;
+      width: 100%;
+    }
+    
+    .btn:hover {
+      background-color: #17506e;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login">
+    <h1>DIABETES PREDICTION</h1>
+    <form action="{{ url_for('predict_datapoint')}}" method="post">
+      <input type="text" name="Pregnancies" placeholder="Pregnancies" required="required" /><br>
+      <input type="text" name="Glucose" placeholder="Glucose" required="required" /><br>
+      <input type="text" name="BloodPressure" placeholder="BloodPressure" required="required" /><br>
+      <input type="text" name="SkinThickness" placeholder="SkinThickness" required="required" /><br>
+      <input type="text" name="Insulin" placeholder="Insulin" required="required" /><br>
+      <input type="text" name="BMI" placeholder="BMI" required="required" /><br>
+      <input type="text" name="DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction" required="required" /><br>
+      <input type="text" name="Age" placeholder="Age" required="required" /><br>
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+  </div>
